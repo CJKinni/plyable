@@ -2,14 +2,6 @@
 
 A Python microframework for interacting with OpenAI's chat APIs.
 
-Plyable provides an interface for working with chat-based LLMs.
-
-It:
- - Gets you sending messages to OpenAI quickly and easily.
- - Manages timeouts.
- - Allows for custom validations.
- - Retries when validations fail.
-
 ## Installing
 
 Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/):
@@ -44,6 +36,16 @@ $ python bot.py
 << Hello! As an AI language model, I do not have personal emotions, but I am functioning properly and ready to assist you. How may I help you today?
 >>
 ```
+
+## Overview
+
+Plyable provides an interface for working with chat-based LLMs.
+
+It:
+ - Gets you sending messages to OpenAI quickly and easily.
+ - Manages timeouts.
+ - Allows for custom validations.
+ - Retries when validations fail.
 
 ## JSON input and output evaluation
 
