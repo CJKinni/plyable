@@ -59,7 +59,12 @@ class Plyable:
         if retries is None:
             retries = self.retries
 
-        [func(self, message) for func in self._on_input_message]
+        # If on_input_message returns a value, we use that as a replacement for the message
+        for func in self._on_input_message:
+            response = func(self, message)
+            if response:
+                message = response
+
         in_validations = [func(self, message) for func in self._validate_input_message]
         failed_validations = [validation for validation in in_validations if validation and validation[0] == False]
         if len(failed_validations) > 0:
