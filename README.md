@@ -51,6 +51,10 @@ It:
 
 Plyable provides a decorator to validate input and output messages. This decorator will check that the message is valid JSON, and that it contains the specified keys. If the message is not valid, it will be logged, and the LLM will be sent an explanation of the error, and will be asked to retry.  This retry loop will occur up to a specified retry limit (3 by default.)
 
+In this example, plyable is used to build a chat bot that sends a JSON string to ChatGPT, and expects a JSON response with 3 keys.  Each response is validated, and if ChatGPT fails to return a valid response, Plyable sends a message back explaining the problem and asking for another attempt.
+
+This example uses `plyable.helpers.validate_json()`, but you can easily build your own validators.
+
 ```python
 from plyable import Plyable
 import plyable.helpers
