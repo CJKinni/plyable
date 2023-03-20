@@ -46,7 +46,8 @@ class Plyable:
         self.rate_limit_retry_enabled = True
         self.rate_limit_retry_timeout = 25
         self.rate_limit_retries = 5
-        self.update_openai_api_key(openai_api_key)
+        if openai_api_key is not None:
+            self.update_openai_api_key(openai_api_key)
         
         
     def _append_to_log(self, role, message):
