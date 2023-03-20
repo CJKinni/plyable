@@ -14,6 +14,10 @@ Currently, the only API supported is OpenAI's chat API.  You will need to [sign 
 
 Once you have your key, you can set it as the OPENAI_API_KEY environment variable, or you can pass it to the Plyable constructor.
 
+```bash
+$ export OPEN_API_KEY="your-key-here"
+```
+
 ## A Simple Example
 
 ```python
