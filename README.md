@@ -158,10 +158,10 @@ Sets the OpenAI API key to the specified key.
 
 ## Roadmap:
 
-[ ] Tiktoken support to manage token length.
-[ ] Pre-validation response-massaging.
-[ ] Support other LLMs beyond OpenAI's.
-[ ] Improve Helper class (and structure.)
+ - [ ] Tiktoken support to manage token length.
+ - [ ] Pre-validation response-massaging.
+ - [ ] Support other LLMs beyond OpenAI's.
+ - [ ] Improve Helper class (and structure.)
 
 ## License
 
