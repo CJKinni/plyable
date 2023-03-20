@@ -1,6 +1,14 @@
-# Plyable Python
+# Plyable
 
 A Python microframework for interacting with OpenAI's chat APIs.
+
+Plyable provides an interface for working with chat-based LLMs.
+
+It:
+ - Gets you sending messages to OpenAI quickly and easily.
+ - Manages timeouts.
+ - Allows for custom validations.
+ - Retries when validations fail.
 
 ## Installing
 
@@ -116,6 +124,10 @@ Plyable allows you to specify four callbacks:
 The `on_input_message` and `on_output_message` callbacks are called after a message is sent or received.  They are passed the message as a string, and return None. They are useful for logging messages, or for performing other actions on messages.
 
 The `validate_input_message` and `validate_output_message` callbacks are called before a message is sent or received.  They are passed the message as a string, and return a tuple. The tuple is of the form `(bool, str)`.  The first element of the tuple is a boolean indicating whether the message is valid.  The second element is a string containing an error message, if the message is not valid.  These callbacks are useful for validating messages.  If a message is not valid, the LLM will be sent the error messages of all failed validations, and will be asked to retry.  This retry loop will occur up to a specified retry limit (3 by default.)
+
+### Why Validations?
+
+Validations are important when using ChatGPT for programatic tasks. It's capable of returning a JSON object fairly regularly, and that can be incredibly useful.  But you want to make sure that whenever it fails, you catch it and handle the failure appropriately.
 
 ### Variables
 
