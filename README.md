@@ -156,6 +156,13 @@ To access the entire log, with all metadata, you can access the `message_log` va
 
 Sets the OpenAI API key to the specified key.
 
+## Roadmap:
+
+[ ] Tiktoken support to manage token length.
+[ ] Pre-validation response-massaging.
+[ ] Support other LLMs beyond OpenAI's.
+[ ] Improve Helper class (and structure.)
+
 ## License
 
 This project is licensed under the terms of the AGPLv3 license.
